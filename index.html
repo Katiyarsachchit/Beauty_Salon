@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace | Luxury Salon & Spa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Glow & Grace</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Transformations</a></li>
+            <li><a href="#booking" class="btn-nav">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-overlay">
+            <h1>Rediscover Your Radiance</h1>
+            <p>Premium beauty treatments and relaxation therapies in the heart of India.</p>
+            <a href="#services" class="btn-main">View Menu</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2 class="section-title">Our Signature Services</h2>
+        <div class="service-container">
+            
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Haircut">
+                <h3>Creative Haircut</h3>
+                <p>Wash, cut, and blow-dry styling by expert stylists.</p>
+                <span class="price">₹ 999</span>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Facial">
+                <h3>Gold Glow Facial</h3>
+                <p>Rejuvenating therapy for glowing, youthful skin.</p>
+                <span class="price">₹ 2,499</span>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Spa">
+                <h3>Aromatherapy Massage</h3>
+                <p>60-minute full body massage with essential oils.</p>
+                <span class="price">₹ 3,200</span>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bridal">
+                <h3>Bridal Makeup</h3>
+                <p>Complete bridal package with trial included.</p>
+                <span class="price">₹ 15,000</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2 class="section-title">Before & After Gallery</h2>
+        <p style="text-align:center; margin-bottom: 20px;">Click the button to see the magic!</p>
+        
+        <div class="gallery-container">
+            <div class="transformation-card">
+                <div class="image-wrapper">
+                    <img id="img1" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Woman Face">
+                </div>
+                <h3>Bridal Glow</h3>
+                <button onclick="toggleImage('img1', 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">See Result</button>
+            </div>
+
+            <div class="transformation-card">
+                <div class="image-wrapper">
+                    <img id="img2" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hair Back">
+                </div>
+                <h3>Hair Color Transformation</h3>
+                <button onclick="toggleImage('img2', 'https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')">See Result</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2 class="section-title">Book an Appointment</h2>
+        <div class="form-container">
+            <form id="bookingForm" onsubmit="confirmBooking(event)">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label>Service</label>
+                    <select id="serviceSelect">
+                        <option value="Haircut">Creative Haircut (₹ 999)</option>
+                        <option value="Facial">Gold Glow Facial (₹ 2,499)</option>
+                        <option value="Massage">Aromatherapy Massage (₹ 3,200)</option>
+                        <option value="Bridal">Bridal Makeup (₹ 15,000)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit" class="btn-submit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Glow & Grace Salon. Made with &hearts; in India.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
